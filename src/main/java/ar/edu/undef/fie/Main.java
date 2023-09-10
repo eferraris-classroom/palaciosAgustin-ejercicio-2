@@ -1,19 +1,41 @@
 package ar.edu.undef.fie;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import org.w3c.dom.ls.LSInput;
+import org.w3c.dom.ls.LSOutput;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        var par = 0;
+        var impar = 0;
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        for (int i = 0; i < args.length; i++) {
+            Integer numero = Integer.parseInt(args[i]);
+            if (numero %2 == 0) {
+                par ++;
+            }
+            else {
+                impar ++;
+            }
+
         }
+        System.out.println("par = " + par);
+        System.out.println("impar = " + impar);
     }
+
+    /* Otra forma:
+    var odd = 0;
+    var even = 0;
+
+    for (var arg:args)
+        if(isOdd(Integer.parseInt(arg))){
+            odd++;
+        } else {
+            even++;
+        }
+
+    private static boolean isOdd (int number){
+        return % 2 == 0:
+    }
+     */
 }
